@@ -1,0 +1,16 @@
+output "tfstate_bucket_name" {
+  value = aws_s3_bucket.terraform_state.bucket
+}
+
+output "lock_table_name" {
+  value = aws_dynamodb_table.terraform_locks.name
+}
+
+output "kms_key_arn" {
+  value = aws_kms_key.terraform.arn
+}
+
+output "terraform_role_arn" {
+  value = aws_iam_role.terraform.arn
+}
+
